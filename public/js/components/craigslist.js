@@ -132,10 +132,10 @@ var Home = function (_Component) {
 
     _this.loopCategories = function () {
       var categoryArray = [1, 2, 3, 4, 5, 6, 7];
-      return categoryArray.map(function () {
+      return categoryArray.map(function (item, i) {
         return _react2.default.createElement(
           "div",
-          { className: "categories" },
+          { className: "categories", key: i },
           _react2.default.createElement(
             "div",
             { className: "title" },
@@ -209,6 +209,17 @@ var Home = function (_Component) {
       });
     };
 
+    _this.loopTags = function () {
+      var tagsArray = [1, 2, 3, 4, 5, 6, 7];
+      return tagsArray.map(function (item, i) {
+        return _react2.default.createElement(
+          "div",
+          { key: i, className: "tag" },
+          "Apple Macbook"
+        );
+      });
+    };
+
     _this.state = {
       name: "Joe"
     };
@@ -232,6 +243,22 @@ var Home = function (_Component) {
           "section",
           { className: "links" },
           this.loopCategories()
+        ),
+        _react2.default.createElement(
+          "section",
+          { className: "trending" },
+          _react2.default.createElement("input", { type: "text", name: "search", className: "search" }),
+          _react2.default.createElement(
+            "div",
+            { className: "title" },
+            _react2.default.createElement("i", { className: "far fa-clock" }),
+            "Trending Now"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "trending-tags" },
+            this.loopTags()
+          )
         )
       );
     }

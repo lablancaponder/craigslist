@@ -11,9 +11,9 @@ export default class Home extends Component {
 
   loopCategories = () => {
     let categoryArray = [1, 2, 3, 4, 5, 6, 7];
-    return categoryArray.map(() => {
+    return categoryArray.map((item, i) => {
       return (
-        <div className="categories">
+        <div className="categories" key={i}>
           <div className="title">Community</div>
 
           <div className="group-links">
@@ -58,6 +58,15 @@ export default class Home extends Component {
       );
     });
   };
+
+  loopTags = () => {
+    let tagsArray = [1, 2, 3, 4, 5, 6, 7];
+    return tagsArray.map((item, i) => (
+      <div key={i} className="tag">
+        Apple Macbook
+      </div>
+    ));
+  };
   render() {
     return (
       <div>
@@ -65,6 +74,15 @@ export default class Home extends Component {
           Connecting People <br /> Everywhere
         </h1>
         <section className="links">{this.loopCategories()}</section>
+
+        <section className="trending">
+          <input type="text" name="search" className="search" />
+          <div className="title">
+            <i className="far fa-clock" />
+            Trending Now
+          </div>
+          <div className="trending-tags">{this.loopTags()}</div>
+        </section>
       </div>
     );
   }
