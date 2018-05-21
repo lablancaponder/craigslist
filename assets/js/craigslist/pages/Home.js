@@ -61,28 +61,32 @@ export default class Home extends Component {
 
   loopTags = () => {
     let tagsArray = [1, 2, 3, 4, 5, 6, 7];
-    return tagsArray.map((item, i) => (
-      <div key={i} className="tag">
-        Apple Macbook
-      </div>
-    ));
+    return tagsArray.map((item, i) => {
+      return (
+        <div key={i} className="tag">
+          Apple Macbook
+        </div>
+      );
+    });
   };
   render() {
     return (
-      <div>
-        <h1>
-          Connecting People <br /> Everywhere
-        </h1>
-        <section className="links">{this.loopCategories()}</section>
+      <div className="home">
+        <div className="container">
+          <h1>
+            Connecting People <br /> Everywhere :)
+          </h1>
+          <section className="links">{this.loopCategories()}</section>
 
-        <section className="trending">
-          <input type="text" name="search" className="search" />
-          <div className="title">
-            <i className="far fa-clock" />
-            Trending Now
-          </div>
-          <div className="trending-tags">{this.loopTags()}</div>
-        </section>
+          <section className="trending">
+            <input type="text" name="search" className="search" />
+            <div className="title">
+              <i className="far fa-clock" />
+              Trending Now
+            </div>
+            <div className="trending-tags">{this.loopTags()}</div>
+          </section>
+        </div>
       </div>
     );
   }

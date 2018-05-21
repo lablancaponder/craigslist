@@ -11,26 +11,28 @@ export default class Header extends Component {
 
   render() {
     return (
-      <header>
-        <div className="leftMenu">
-          <div className="logo">Craigslist</div>
-          <div className="city">
-            Denver
-            <i className={`fa fa-chevron-down`} />
+      <div className="container">
+        <header>
+          <div className="leftMenu">
+            <div className="logo">Craigslist</div>
+            <div className="city">
+              Denver
+              <i className={`fa fa-chevron-down`} />
+            </div>
           </div>
-        </div>
 
-        <div className="rightMenu">
-          <div className="userImage">
-            <i className={`fa fa-user-circle`} />
+          <div className="rightMenu">
+            <div className="userImage">
+              <i className={`fa fa-user-circle`} />
+            </div>
+            <div className="userDropdown">
+              My Account
+              <i className={`fa fa-chevron-down`} />
+            </div>
+            <div className="postButton">Post To Classifieds</div>
           </div>
-          <div className="userDropdown">
-            My Account
-            <i className={`fa fa-chevron-down`} />
-          </div>
-          <div className="postButton">Post To Classifieds</div>
-        </div>
-      </header>
+        </header>
+      </div>
     );
   }
 }

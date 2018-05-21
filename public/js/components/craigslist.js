@@ -46,41 +46,45 @@ var Header = function (_Component) {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
-        "header",
-        null,
+        "div",
+        { className: "container" },
         _react2.default.createElement(
-          "div",
-          { className: "leftMenu" },
+          "header",
+          null,
           _react2.default.createElement(
             "div",
-            { className: "logo" },
-            "Craigslist"
+            { className: "leftMenu" },
+            _react2.default.createElement(
+              "div",
+              { className: "logo" },
+              "Craigslist"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "city" },
+              "Denver",
+              _react2.default.createElement("i", { className: "fa fa-chevron-down" })
+            )
           ),
           _react2.default.createElement(
             "div",
-            { className: "city" },
-            "Denver",
-            _react2.default.createElement("i", { className: "fa fa-chevron-down" })
-          )
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "rightMenu" },
-          _react2.default.createElement(
-            "div",
-            { className: "userImage" },
-            _react2.default.createElement("i", { className: "fa fa-user-circle" })
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "userDropdown" },
-            "My Account",
-            _react2.default.createElement("i", { className: "fa fa-chevron-down" })
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "postButton" },
-            "Post To Classifieds"
+            { className: "rightMenu" },
+            _react2.default.createElement(
+              "div",
+              { className: "userImage" },
+              _react2.default.createElement("i", { className: "fa fa-user-circle" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "userDropdown" },
+              "My Account",
+              _react2.default.createElement("i", { className: "fa fa-chevron-down" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "postButton" },
+              "Post To Classifieds"
+            )
           )
         )
       );
@@ -231,33 +235,37 @@ var Home = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "div",
-        null,
+        { className: "home" },
         _react2.default.createElement(
-          "h1",
-          null,
-          "Connecting People ",
-          _react2.default.createElement("br", null),
-          " Everywhere"
-        ),
-        _react2.default.createElement(
-          "section",
-          { className: "links" },
-          this.loopCategories()
-        ),
-        _react2.default.createElement(
-          "section",
-          { className: "trending" },
-          _react2.default.createElement("input", { type: "text", name: "search", className: "search" }),
+          "div",
+          { className: "container" },
           _react2.default.createElement(
-            "div",
-            { className: "title" },
-            _react2.default.createElement("i", { className: "far fa-clock" }),
-            "Trending Now"
+            "h1",
+            null,
+            "Connecting People ",
+            _react2.default.createElement("br", null),
+            " Everywhere :)"
           ),
           _react2.default.createElement(
-            "div",
-            { className: "trending-tags" },
-            this.loopTags()
+            "section",
+            { className: "links" },
+            this.loopCategories()
+          ),
+          _react2.default.createElement(
+            "section",
+            { className: "trending" },
+            _react2.default.createElement("input", { type: "text", name: "search", className: "search" }),
+            _react2.default.createElement(
+              "div",
+              { className: "title" },
+              _react2.default.createElement("i", { className: "far fa-clock" }),
+              "Trending Now"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "trending-tags" },
+              this.loopTags()
+            )
           )
         )
       );
