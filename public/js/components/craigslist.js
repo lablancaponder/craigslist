@@ -73,7 +73,7 @@ var Header = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "userImage" },
-            "IMG"
+            _react2.default.createElement("i", { className: "fa fa-user-circle" })
           ),
           _react2.default.createElement(
             "div",

@@ -1,7 +1,71 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import "reset";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  background: yellow;
+  background-image: linear-gradient(
+      135deg,
+      rgba(42, 5, 250, 0.8) 0%,
+      rgba(170, 0, 255, 0.8) 100%
+    ),
+    url("https://pixabay.com/get/e830b70828f1033ed1534705fb094190ea74e7d21dac104497f6c970a7e8b4bc/denver-1567052_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: white;
+
+  .fa {
+    margin-left: 10px;
+  }
+}
+
+.leftMenu {
+  display: flex;
+  .logo {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+  }
+}
+
+.rightMenu {
+  display: flex;
+  .userImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .userDropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .postButton {
+    font-weight: 300;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    background: rgb(50, 106, 228);
+    color: white;
+  }
 }

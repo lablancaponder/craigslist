@@ -23,7 +23,9 @@ export default class Header extends Component {
         </div>
 
         <div className="rightMenu">
-          <div className="userImage">IMG</div>
+          <div className="userImage">
+            <i className={`fa fa-user-circle`} />
+          </div>
           <div className="userDropdown">
             My Account
             <i className={`fa fa-chevron-down`} />
