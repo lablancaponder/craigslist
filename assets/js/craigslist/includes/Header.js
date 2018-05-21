@@ -8,9 +8,7 @@ export default class Header extends Component {
       name: "Joe"
     };
   }
-  clickedBtn = () => {
-    console.log("swag");
-  };
+
   render() {
     return (
       <header>
