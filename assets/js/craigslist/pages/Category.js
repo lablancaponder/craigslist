@@ -11,7 +11,7 @@ export default class Category extends Component {
     const { match, location, history } = this.props;
     return (
       <div className="category">
-        <div className="container" />
+        <div className="container">Listings under {match.params.category}</div>
       </div>
     );
   }
