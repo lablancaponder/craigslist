@@ -4,9 +4,7 @@ import ReactDOM from "react-dom";
 export default class Header extends Component {
   constructor() {
     super();
-    this.state = {
-      name: "Joe"
-    };
+    this.state = {};
   }
 
   render() {

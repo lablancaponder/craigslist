@@ -4,9 +4,7 @@ import ReactDOM from "react-dom";
 export default class Home extends Component {
   constructor() {
     super();
-    this.state = {
-      name: "Joe"
-    };
+    this.state = {};
   }
 
   loopCategories = () => {
@@ -74,7 +72,7 @@ export default class Home extends Component {
       <div className="home">
         <div className="container">
           <h1>
-            Connecting People <br /> Everywhere :)
+            Connecting People <br /> Everywhere
           </h1>
           <section className="links">{this.loopCategories()}</section>
 
